@@ -102,8 +102,32 @@ public class Colosseum {
      * (Look, we can return objects too!)
      */
     public static Pokemon buildPokemon() {
-        Pokemon returnPokemon = null;
-        return returnPokemon;
+        int type = 0;
+        while (type != 1 && type != 2 && type != 3) {
+            type = myScan.nextInt();
+        }
+
+        if (type == 1) {
+            Pokemon newPokemon = new ElectricPokemon();
+            newPokemon.setName(myScan.nextLine());
+            newPokemon.setHitPoints(myScan.nextInt());
+            newPokemon.setAttackLevel(myScan.nextInt());
+            newPokemon.setDefenseLevel(myScan.nextInt());
+        } else if (type == 2) {
+            Pokemon newPokemon = new FirePokemon();
+            newPokemon.setName(myScan.nextLine());
+            newPokemon.setHitPoints(myScan.nextInt());
+            newPokemon.setAttackLevel(myScan.nextInt());
+            newPokemon.setDefenseLevel(myScan.nextInt());
+        } else if (type == 3) {
+            Pokemon newPokemon = new WaterPokemon();
+            newPokemon.setName(myScan.nextLine());
+            newPokemon.setHitPoints(myScan.nextInt());
+            newPokemon.setAttackLevel(myScan.nextInt());
+            newPokemon.setDefenseLevel(myScan.nextInt());
+        }
+
+        return newPokemon;
     }
 
     /**
